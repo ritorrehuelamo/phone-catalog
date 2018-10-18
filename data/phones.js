@@ -3,6 +3,7 @@ const data = [
 		id: '1',
 		name: 'Nokia 8 Sirocco',
 		baseImg: 'https://dl.dropboxusercontent.com/s/ho2snhbs2ci4bmr/nokia8-01.png?dl=0',
+		price: 495.0,
 		brand: 'Nokia',
 		specs: {
 			os: 'Android 8.1',
@@ -37,6 +38,7 @@ const data = [
 		name: 'Iphone X',
 		baseImg: 'https://dl.dropboxusercontent.com/s/1ci1mlbiwjbqsz9/iphoneX-01.png?dl=0',
 		brand: 'Apple',
+		price: 850.0,
 		specs: {
 			os: 'iOS 11',
 			display: {
@@ -70,6 +72,7 @@ const data = [
 		name: 'Huawei P20',
 		baseImg: 'https://dl.dropboxusercontent.com/s/03m3uvu10n3fqpg/huaweiP20-01.png?dl=0',
 		brand: 'Huawei',
+		price: 227.99,
 		specs: {
 			os: 'Android 8.1',
 			display: {
@@ -102,6 +105,7 @@ const data = [
 		name: 'Xperia XZ2',
 		baseImg: 'https://dl.dropboxusercontent.com/s/blhw4r5hhlinyse/xperiaXZ2.png?dl=0',
 		brand: 'Sony',
+		price: 409.0,
 		specs: {
 			os: 'Android 8.0',
 			display: {
@@ -133,6 +137,7 @@ const data = [
 		name: 'Huawei Y7',
 		baseImg: 'https://dl.dropboxusercontent.com/s/xgwep1tw7v3le5d/huaweiY7-01.png?dl=0',
 		brand: 'Huawei',
+		price: 409.0,
 		specs: {
 			os: 'Android 7.0',
 			display: {
@@ -165,6 +170,7 @@ const data = [
 		name: 'LG Q6',
 		baseImg: 'https://dl.dropboxusercontent.com/s/er96j5xvlv4p7wk/lgQ6-01.png?dl=0',
 		brand: 'LG',
+		price: 149.0,
 		specs: {
 			os: 'Android 7.1',
 			display: {
