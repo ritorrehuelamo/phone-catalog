@@ -5,6 +5,7 @@ const helmet = require('helmet')
 const httpError = require('http-errors')
 const bodyParser = require('body-parser')
 const cookieParser = require('cookie-parser')
+const debug = require('debug')('phone-app:server');
 
 const server = require('express')()
 
@@ -22,5 +23,6 @@ server.use((req, res, next) => {
 })
 
 server.listen(PORT, () => {
+  debug(`Loaded on port ${PORT}`);
   console.log(`Server running on port ${PORT}...`)
 })
