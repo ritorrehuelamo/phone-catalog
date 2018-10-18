@@ -2,7 +2,28 @@ const expect = require('expect')
 const request = require('supertest')
 
 const app = 'http://localhost:3000/'
+let order = {
+  name: 'john',
+  surname: 'doe',
+  email: 'john@doe.com',
+  phones: [
+     {
+       name: 'Iphone X'
+     }
+  ]
+}
 
+let response = {
+  data: {
+      name: 'john',
+      surname: 'doe',
+      email: 'john@doe.com',
+      price: {
+          currency: 'EUR',
+          total: 850
+      }
+  }
+}
 describe('GET /phones', () => {
   it ('should get all phone list', done => {
     request(app)
@@ -27,14 +48,13 @@ describe('GET /phones', () => {
 
 describe('POST /phones', () => {
   it('should receive an order', () => {
-    let order = {price: 200}
-
     request(app)
-      .post('/phones')
+      .post('phones')
       .send(order)
       .expect(200)
       .end((err, res) => {
         if (err) return done(err)
+        expect(res.body).toBe(response)
       })
   })
 })

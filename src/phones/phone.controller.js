@@ -1,7 +1,7 @@
 const httpError = require('http-errors')
-const phoneList = require('../../data/phones')
+const phoneList = require('../data/phones')
 const debug = require('debug')('phone-app:phone-controller')
-const utils = require('../../middleware/utils')
+const utils = require('../middleware/utils')
 
 
 const getAllPhones = (req, res) => {
@@ -26,7 +26,7 @@ const getPhoneById = (req, res) => {
 const createOrder = (req, res) => {
   const {name, surname, email, phones} = req.body
   let totalPrice = utils.getTotalPrizeOfPhoneList(phones)
-  res.status(200).json({data: {name, surname, email, price: totalPrice}})
+  res.status(200).json({data: {name, surname, email, price: {currency: 'EUR', total: totalPrice}}})
 }
 
 module.exports = {

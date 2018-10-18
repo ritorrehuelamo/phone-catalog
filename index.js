@@ -19,6 +19,7 @@ server.use(helmet())
 server.use('/', router)
 
 server.use((req, res, next) => {
+  debug(`${req.originalUrl}`)
   next(httpError(404, 'Route not found'))
 })
 
